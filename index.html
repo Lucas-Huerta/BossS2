@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luv Resval</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery Avant Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- Vue-router pour injection des composants => routage & navigation -->
+    <script src="https://unpkg.com/vue-router"></script>
+
+    <!-- Lib Axios pour Ajax -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Librairie momentJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js">
+    </script>
+</head>
+<body>
+<div id="app">
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item titresNavbar">
+                            <router-link
+                                    class="nav-link"
+                                    to="/">
+                            </router-link>
+                        </li>
+                        <li class="nav-item titresNavbar">
+                            <router-link
+                                    class="nav-link"
+                                    :to="{name:'Accueil'}">
+                                ACCUEIL
+                            </router-link>
+                        </li>
+                        <li class="nav-item titresNavbar">
+                            <router-link
+                                    class="nav-link"
+                                    :to="{name:'Biographie'}">
+                                BIOGRAPHIE
+                            </router-link>
+                        </li>
+                        <li class="nav-item titresNavbar">
+                            <router-link
+                                    class="nav-link"
+                                    :to="{name:'Albums'}">
+                                ALBUMS
+                            </router-link>
+                        </li>
+                        <li class="nav-item titresNavbar">
+                            <router-link
+                                    class="nav-link"
+                                    :to="{name:'Univers'}">
+                                UNIVERS
+                            </router-link>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+                        <button class="btn" type="submit">Valider</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+<!-- point insertion des composants-->
+<router-view></router-view>
+<!-- Modal -->
+
+<footer>
+    <div class="container">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-3">
+                    <h4 class="titresFooter">
+                        A propos
+                    </h4>
+                </div>
+                <div class="col-3">
+                    <h4 class="titresFooter">
+                        Liens utiles
+                    </h4>
+                </div>
+                <div class="col-3">
+                    <h4 class="titresFooter">
+                        Pages
+                    </h4>
+                </div>
+                <div class="col-3">
+                    <h4 class="titresFooter">
+                        Nous contacter
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="texteFooter">
+                        Exercice réalisé dans le cadre
+                        pédagogique du département
+                        MMI Montbéliard.
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="texteFooter">
+                        Mentions légales
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="texteFooter">
+                        <ul id="listeFooter">
+                            <li>
+                                <router-link
+                                        :to="{name:'Biographie'}">
+                                    BIOGRAPHIE
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link
+                                        :to="{name:'Albums'}">
+                                    ALBUMS
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link
+                                        :to="{name:'Univers'}">
+                                    UNIVERS
+                                </router-link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<!-- les composants utilisés -->
+<script src="Accueil.vue.js"></script>
+<script src="Biographie.vue.js"></script>
+<script src="Albums.vue.js"></script>
+<script src="Univers.vue.js"></script>
+
+<script src="createAlbum.vue.js"></script>
+
+<script>
+    // Les routages / navigation de l'application
+    var routes = [
+        {path: '/',				 name:"Accueil",		           component:Accueil},
+
+        {path: '/Biographie',	 name:"Biographie",	               component:Biographie},
+        {path: '/Albums',	     name:"Albums",	                   component:Albums},
+        {path: '/Univers',	     name:"Univers",	               component:Univers},
+
+        {path: '/CreateAlbum',   name:"CreateAlbum",               component:CreateAlbum},
+    ]
+    // Initialisation du router
+    var router = new VueRouter(
+        {routes: routes}
+    )
+    // La vue de l'application (id="app")
+    var app = new Vue({
+        el:"#app",
+        router:router
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+/*
+GENERAL
+ */
+
+.paragraphes{
+    font-family: Bitter;
+    font-size: 15pt;
+    color: black;
+}
+
+.images{
+    width: 200px;
+    height: 200px;
+}
+
+ul{
+    list-style: none;
+}
+
+.titres{
+    font-family: Kanit;
+    font-size: 50pt;
+    color: #69469B;
+}
+
+.texteCentre{
+    text-align: center;
+}
+
+.centrer{
+    text-align: center;
+}
+
+hr{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: black;
+    width: 400px;
+}
+
+.droite{
+    float: right;
+    margin-right: 20px;
+}
+
+.gauche{
+    margin-left: 20px;
+}
+
+
+/*
+NAVBAR
+ */
+
+nav{
+    background-color: black;
+}
+
+.titresNavbar>a{
+    color: white;
+}
+
+.titresNavbar{
+    font-family: Kanit;
+    font-size: 30pt;
+}
+
+.btn{
+    color: white;
+}
+
+a:hover{
+    color: #69469B;
+}
+
+/*
+PAGE INDEX
+ */
+
+.marginTop{
+    margin-top: 200px;
+}
+
+.imagesPaysage{
+    height: 230px;
+    width: 400px;
+}
+
+/*
+PAGE BIOGRAPHIE
+ */
+
+.imgBio{
+    float: right;
+    margin-right: 30px;
+}
+
+/*
+PAGE ALBUMS
+ */
+
+.imgAlbum{
+    float: right;
+    margin-right: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+.rowAlbum{
+    margin-bottom: 5vh;
+}
+
+/*
+PAGE MODIFICATION
+ */
+
+.modification{
+    margin-top: 30px;
+    border: solid 2px black;
+}
+
+.titresModification{
+    margin-top: 30px;
+    font-family: Kanit;
+    font-size: 20pt;
+    color: black;
+}
+
+
+/*
+PAGE UNIVERS
+ */
+
+.titresUnivers{
+    margin-top: 10vh;
+    font-family: Kanit;
+    font-size: 50pt;
+    color: white;
+    margin-bottom: 10vh;
+}
+
+.imgUnivers{
+    width: 300px;
+    height: 300px;
+}
+
+.paragraphesUnivers{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    font-family: Bitter sans-serif;
+    font-size: 15pt;
+    color: white;
+}
+
+.backgroundViolet{
+    background-color: #69469B;
+    height: 90vh;
+}
+
+/*
+FOOTER
+ */
+
+footer{
+    background-color: black;
+    margin-top: 40px;
+}
+
+#listeFooter>li>router-link{
+    color: white;
+}
+
+footer.footerSticky{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+.titresFooter{
+    font-family: Kanit;
+    font-size: 20pt;
+    color: #69469B;
+}
+
+.texteFooter{
+    font-family: Bitter;
+    font-size: 10pt;
+    color: white;
+}
+
